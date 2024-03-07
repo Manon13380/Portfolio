@@ -1,0 +1,88 @@
+<section id="projects">
+	<h2 id="projetTitle" class="titleSection">
+		Projets</h2>
+	<div id="projectContainer" class="projectContainer">
+		<div id="scrollBarre">
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+			<span class="pointScroll"></span>
+		</div>
+		{#slide 1#}
+		{% for project in projects %}
+			<div class="viewProjectContainer slideProject">
+				<div class="imgContainer">
+					<img id="viewProject" src="/images/ordinateur.png" alt="Dessin bureau">
+					<img id="imgProjet" src="/images/uploads/{{project.image}}" alt="">
+				</div>
+				<div class="lienContainer">
+					<p id="projectName">{{project.name}}</p>
+					{% if project.url != "" %}
+						<a href="{{project.url}}" class="lienProject">
+							<img src="/images/lien_jouer.png" alt="image lien pour jouer" width="25">
+							<p>Jouer</p>
+						</a>
+					{% endif %}
+
+					<a href="{{project.urlGithub}}" class="lienProject">
+						<img src="/images/lien_github.png" alt="Image gitHub" width="25">
+						<p>Lien gitHub</p>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+const sliderSection = document.getElementById('projectContainer');
+
+sliderSection.addEventListener('wheel', function (event) {
+event.preventDefault();
+
+const delta = Math.sign(event.deltaY);
+
+if (delta > 0) {
+slideDown(1);
+} else if (delta < 0) {
+slideUp(-1);
+}
+});
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function slideDown(n) {
+showSlides(slideIndex += n)
+}
+
+function slideUp(n) {
+showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("slideProject");
+let dots = document.getElementsByClassName("pointScroll");
+if (n > slides.length) {
+slideIndex = 1
+}
+if (n < 1) {
+slideIndex = slides.length
+}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace("slideActive", "");
+}
+slides[slideIndex - 1].style.display = "flex";
+dots[slideIndex - 1].className += " slideActive";
+}
+	})
+</script>

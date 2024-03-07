@@ -1,0 +1,26 @@
+<main id="mainAddForm">
+	<section class="addForm">
+		<h2>Modifier un projet</h2> 
+		<form action="/updateProject/{{project.id}}" method="post" enctype ="multipart/form-data">
+			<div id="addForm">
+				<div class="labelInputContainer">
+					<label for="name">Nom :</label>
+					<label for="description">Description :</label>
+					<label for="url">URL :</label>
+					<label for="urlGithub">Url Github :</label>
+					<label for="image">Image :</label>
+				</div>
+					<div class="labelInputContainer">
+						<input name="name" type="text" required value="{{project.name}}">
+						<input name="description" type="text" required value="{{project.description}}">
+						<input name="url" type="text" value="{{project.url}}">
+						<input name="urlGithub" type="text" required value="{{project.urlGithub}}">
+						<input name="image" type="file" value="{{project.image}}">
+					</div>
+			</div>
+			<div class="buttonContainer">
+				<button class="createButton">Modifier</button>
+			</div>
+		</form>
+	</section>
+</main>

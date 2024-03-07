@@ -1,0 +1,20 @@
+<main class="loginContainer">
+	<section class="loginForm">
+		<h2 id="titleLogin">Accès espace administrateur</h2>
+		<form id="formulaireLogin" action="./login" method="post">
+			<div>
+				<input id="email" name="email" class="loginInput" type="text" placeholder="Email" required>
+				{% if error.email is defined  %}
+					<p class="error">{{error.email}}</p>
+				{% endif %}
+			</div>
+			<div>
+				<input id="password" name="password" class="loginInput" type="password" placeholder="Password" required>
+				{% if error.password is defined  %}
+					<p class="error">{{error.password}}</p>
+				{% endif %}
+			</div>
+			<button class="button">Login</button>
+		</form>
+	</section>
+</main>

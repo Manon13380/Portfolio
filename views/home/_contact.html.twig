@@ -1,0 +1,31 @@
+<section id="contact">
+	<h2 id="contactTitle" class="titleSection">Contact</h2>
+	<div class="formContainer">
+	<p>{{emailMessage}}</p>
+		<form id="contactForm" action="/sendMail" method="post">
+			<label for="email">Votre adresse e-mail:</label><br>
+			<input class="inputContact" type="email" id="email" name="email" required><br><br>
+
+			<label for="objet">Objet:</label><br>
+			<input class="inputContact" type="text" id="objet" name="objet" required><br><br>
+
+			<label for="message">Message:</label><br>
+			<textarea class="inputContact" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+			<div class="buttonContainer">
+				<button>Envoyer</button>
+				<button onclick="resetForm()">Effacer</button>
+			</div>
+		</form>
+	</div>
+</section>
+
+<script>
+	function resetForm() {
+let email = document.getelementbyid("email")
+let objet = document.getelementbyid("objet")
+let message = document.getelementbyid("message")
+email.innerHTML = ""
+objet.innerHTML = ""
+message.innerHTML = ""
+}
+</script>

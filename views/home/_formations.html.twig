@@ -1,0 +1,106 @@
+<section id="formation">
+	<h2 id="formationTitle" class="titleSection">
+		Formations</h2>
+
+	<div class="sliderContainer">
+		<div class="formationContainer">
+			<div>
+				<img onclick="plusSlides(-1)" id="buttonLeft" class="buttonSlider" src="/images/slider.png" alt="buttonleft">
+			</div>
+			{# slide 1 #}
+			<div class="slide">
+				<div>
+					<img class="imagesFormation" src="/images/formation_dev.png" alt="Image Formation" width="350">
+				</div>
+				<article class="descFormationContainer">
+					<h3>Développeur web et web mobile</h3>
+					<p class="descriptionFormation">Formation Développeur Web et Web Mobile
+						<br>
+						Ecole RI7 Aubagne</p>
+				</article>
+			</div>
+			{# slide 2 #}
+			<div id="languages" class="slide">
+				<div>
+					<img class="imagesFormation" src="/images/formation_dev.png" alt="Image Formation" width="350">
+				</div>
+				<article class="descFormationContainer">
+					<h3>Langages et technologies</h3>
+					<p class="descriptionFormation">
+						HTML / CSS
+						<br>
+						PHP / JS
+						<br>
+						Node.js / MongoDB
+						<br>
+						MySQL / Git
+						<br>
+						Figma / Wordpress
+						<br>
+						Bootstrap
+					</p>
+				</article>
+			</div>
+			{# slide 3 #}
+			<div id="nurseExperience" class="slide">
+				<div>
+					<img class="imagesFormation" src="images/formation_infirmière.png" alt="Image Formation" width="350">
+				</div>
+				<article class="descFormationContainer">
+					<h3>Infirmière diplômée d'état</h3>
+					<div class="descriptionFormation">
+						<div class="experienceContainer">
+							<p class="experience">Infirmière conseil pour un prestataire de santé - ELIVIE</p>
+							<p class="date">2019-2023</p>
+						</div>
+						<div class="experienceContainer">
+							<p class="experience">Infirmière coordinatrice pour un prestataire de santé -AJR</p>
+							<p class="date">2018-2019</p>
+						</div>
+						<div class="experienceContainer">
+							<p class="experience">Infirmière de nuit- Unité de surveillance continue - Clin Vert Coteau</p>
+							<p class="date">2015-2018</p>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div>
+				<img id="buttonRight" onclick="plusSlides(1)" class="buttonSlider" src="/images/slider.png" alt="buttonright">
+			</div>
+		</div>
+		<div class="dotsContainer">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+	</section>
+	<script>
+		let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("slide");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {
+slideIndex = 1
+}
+if (n < 1) {
+slideIndex = slides.length
+}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace("slideActive", "");
+}
+slides[slideIndex - 1].style.display = "flex";
+dots[slideIndex - 1].className += " slideActive";
+}
+	</script>

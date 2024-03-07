@@ -1,0 +1,46 @@
+<main>
+	<section class="projectList">
+		<h2 class="listTitle">Liste des projets</h2>
+		<div class="projectContainer">
+			{% for project in projects %}
+				<div class="project">
+					<div class="inputContainer">
+						<p>
+							<b>Nom :</b>
+							{{project.name}}
+						</p>
+					</div>
+					<div class="inputContainer">
+						<img src="/images/uploads/{{project.image}}" alt="" width="150"/>
+					</div>
+					<div class="inputContainer">
+						<p>
+							<b>Description :</b>
+							{{project.description}}
+						</p>
+
+					</div>
+					<div class="inputContainer">
+						<p>
+							<b>Url :</b>
+							{{project.url}}
+						</p>
+					</div>
+					<div class="inputContainer">
+						<p>
+							<b>Url GitHub :</b>{{project.urlGithub}}
+						</p>
+					</div>
+					<div class="buttonContainer">
+						<a href="/updateProject/{{project.id}}"class="updateButton">
+							<b>Update</b>
+						</a>
+						<a class="deleteButton" href="/deleteProject/{{project.id}}">
+							<b>Delete</b>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+</main>

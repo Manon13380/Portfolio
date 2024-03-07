@@ -1,0 +1,14 @@
+{% extends "../base.html.twig" %}
+<main>
+	{% block main %}
+		{% include "home/_title.html.twig" %}
+		{% include "home/_presentation.html.twig" %}
+		{% include "home/_formations.html.twig" %}
+		{% include "home/_projets.html.twig" %}
+		{% include "home/_contact.html.twig" %}
+	{% endblock %}
+</main>
+{% block script %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="./js/home.js"></script>
+{% endblock %}

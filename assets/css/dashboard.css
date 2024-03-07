@@ -1,0 +1,295 @@
+@font-face {
+    font-family: olivia;
+    src: url(../fonts/Olivia-Regular.ttf);
+}
+
+@font-face {
+    font-family: tidal;
+    src: url(../fonts/Tidal.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: champagne;
+    src: url(../fonts/Champagne.ttf);
+}
+
+@font-face {
+    font-family: amour;
+    src: url(../fonts/NouvelAmour-Regular.ttf);
+}
+
+@font-face {
+    font-family: queen;
+    src: url(../fonts/TheQueen-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: rgba(255, 245, 236, 1);
+}
+
+
+
+/* CSS Header */
+.header {
+    font-family: champagne;
+    background-color: rgba(252, 206, 163, 1);
+    height: 35px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.barreNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 0;
+    height: 30px;
+    padding-top: 2.5px;
+    padding-left: 0
+}
+
+.menuList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: rgba(107, 171, 130, 0.6667);
+}
+
+.connexion {
+    border: none;
+    background-color: transparent;
+}
+
+.menuBurger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu:hover {
+    color: rgba(186, 91, 59, 1);
+}
+
+#menuLarge {
+    display: block;
+}
+
+#logosMenuBurger {
+    display: none;
+    cursor: pointer;
+}
+
+.logoInitiale {
+    cursor: auto;
+}
+
+@media (max-width : 630px) {
+    .header {
+        position: relative;
+    }
+
+    .menuBurger {
+        padding: 0;
+    }
+
+    #menuLarge {
+        display: none;
+    }
+
+    #logosMenuBurger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoMenuBurger {
+        height: 25px;
+        position: absolute;
+        left: 90%
+    }
+}
+
+.hidden {
+    display: none
+}
+
+/* CSS main dashBoard */
+main {
+    z-index: -1000;
+    min-height: calc(100vh - 35px);
+    margin-bottom: 20px;
+}
+
+.listTitle {
+    text-align: center;
+    font-family: olivia;
+    font-size: 4em;
+    font-weight: 200;
+    color: rgba(186, 91, 59, 1);
+    margin-top: 100px;
+}
+
+.projectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    gap: 50px;
+    row-gap: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: rgba(252, 194, 179, 0.31);
+    border-radius: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(153, 199, 170, 1);
+    min-height: 300px;
+    min-width: 250px;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    font-family: champagne;
+}
+
+.updateInput {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-family: champagne;
+
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: black;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.updateButton {
+    border: 2px solid rgba(252, 194, 179, 0.31);
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px
+}
+
+
+.deleteButton {
+    border: 2px solid rgba(252, 194, 179, 0.31);
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px
+}
+
+.error {
+    margin: 0
+}
+
+/* css main form add project */
+#mainAddForm {
+    display: flex;
+    justify-content: center;
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    background-color: rgba(252, 194, 179, 0.31);
+    height: 350px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.addForm h2 {
+    margin-bottom: 50px;
+    font-family: champagne;
+    color: rgba(107, 171, 130, 0.6667);
+}
+
+.labelInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.labelInputContainer input {
+    width : 150px
+}
+
+#imageInput {
+    width : 250px
+}
+
+
+
+
+#addForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.createButton {
+    margin-top: 30px;
+    font-family: tidal;
+}
+
+/* CSS footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(153, 199, 170, 0.64);
+    height: 35px;
+}
+
+.footerReseau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 2.5px
+}
+
+@media (max-width:370px) {
+    .footerReseau {
+        gap: 20px;
+
+    }
+}

@@ -1,0 +1,63 @@
+<header class="header">
+	<div id="menuLarge">
+		<nav>
+			<ul class="barreNav">
+				<li class="menuList">
+					<a class="menu" href="/#presentation">Présentation</a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#formation">Formation</a>
+				</li>
+				<li class="menuList">
+					<a href="/login"><img class="logoInitiale" src="./images/logo_initiale.png" alt="Logo initiales" width="75"></a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#projects">Projets</a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div id="logosMenuBurger">
+		<a href="/login"><img class="logoInitiale" src="./images/logo_initiale.png" alt="Logo initiales" width="75"></a>
+		<img onclick="menuBurger()" class="logoMenuBurger" src="./images/menuBurger.png" alt="Logo menu Burger" width="25">
+	</div>
+	<div class="hidden" id="menuBurger">
+		<nav>
+			<ul class="menuBurger">
+				<li class="menuList">
+					<a class="menu" href="/#presentation">Présentation</a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#formation">Formation</a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#projects">Projets</a>
+				</li>
+				<li class="menuList">
+					<a class="menu" href="/#contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<script>
+function menuBurger() {
+    let menuBurger = document.querySelector('#menuBurger')
+    if (menuBurger.classList.contains("hidden")) {
+        menuBurger.classList.remove("hidden")
+        document.querySelector('.header').style.height = "145px"
+    } else {
+        menuBurger.classList.add("hidden")
+        document.querySelector('.header').style.height = "35px"
+    }
+}
+
+addEventListener("resize", (event) => {
+    let menuBurger = document.querySelector('#menuBurger')
+    document.querySelector('.header').style.height = "35px"
+    menuBurger.classList.add("hidden")
+});
+</script>
