@@ -33,6 +33,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    position: relative;
+}
+
 /* CSS Header */
 .header {
     font-family: champagne;
@@ -130,11 +134,43 @@ html {
 /* css main home */
 
 /* section titre portfolio */
+.imageAbsolute {
+    position: absolute;
+
+}
+
+#img_feuille_one {
+    left: 0%;
+    top: -30%;
+    width: 270px;
+}
+
+#etoile_one {
+    left: 70%;
+    top: -10%;
+}
+
+#etoile_two {
+    left: 20%;
+    top: 40%;
+}
+
+#etoile_three {
+    left: 80%;
+    top: 50%;
+}
+
+#etoile_four {
+    left: 90%;
+    top: 25%;
+}
+
+
 #titlePortfolio {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 250px;
     height: calc(100vh - 35px);
     position: relative;
 
@@ -163,7 +199,7 @@ html {
 
 #scrollImage {
     position: absolute;
-    top: 90%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -173,7 +209,31 @@ html {
     opacity: 0
 }
 
+@media (max-width : 1100px) {
+    #img_feuille_one {
+        left: 0%;
+        top: -30%;
+        width: 240px;
+    }
+}
+
 @media (max-width : 800px) {
+    #etoile_one {
+        width: 25px;
+    }
+
+    #etoile_two {
+        width: 25px;
+    }
+
+    #etoile_three {
+        width: 25px;
+    }
+
+    #etoile_four {
+        width: 25px;
+    }
+
     #namePortfolio {
         font-size: 8em;
     }
@@ -187,7 +247,26 @@ html {
     }
 }
 
+@media (max-width : 700px) {
+    #img_feuille_one {
+        top: -30%;
+        width: 220px;
+    }
+}
+
+@media (max-width : 580px) {
+
+    #img_feuille_one {
+        width: 200px;
+    }
+}
+
 @media (max-width : 530px) {
+    #img_feuille_one {
+        top: -25%;
+        width: 180px;
+    }
+
     #namePortfolio {
         font-size: 6em;
     }
@@ -213,9 +292,47 @@ html {
     .image {
         width: 15px;
     }
+
+    #scrollImage {
+        top: 55%;
+    }
 }
 
 /* section présentation */
+#etoile_five {
+    left: 5%;
+    top: 167%;
+}
+
+#etoile_six {
+    left: 60%;
+    top: 155%;
+}
+
+#etoile_seven {
+    left: 97%;
+    z-index: 20;
+    top: 220%;
+}
+
+#etoile_eight {
+    z-index: 20;
+    left: 40%;
+    top: 240%;
+}
+
+#img_feuille_two {
+    width: 500px;
+    right: 0;
+    top: 140%
+}
+
+#img_feuille_three {
+    width: 200px;
+    right: 70%;
+    top: 110%
+}
+
 #presentation {
     margin-top: 100px;
     display: flex;
@@ -226,7 +343,7 @@ html {
 
 #aboutTitle {
     text-align: left;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
 .titleSection {
@@ -288,6 +405,11 @@ html {
 }
 
 @media (max-width:1240px) {
+    #img_feuille_two {
+        width: 400px;
+
+    }
+
     .aboutContainer {
         width: 1000px;
     }
@@ -296,6 +418,7 @@ html {
         width: 1000px;
     }
 }
+
 
 @media (max-width:1040px) {
     .aboutContainer {
@@ -309,7 +432,43 @@ html {
 
 }
 
+@media (max-width:980px) {
+    #etoile_five {
+        left: 1%;
+    }
+
+    #etoile_six {
+        left: 50%;
+    }
+
+}
+
+@media (max-width:800px) {
+    #etoile_five {
+        width: 25px;
+    }
+
+    #etoile_six {
+        width: 25px;
+    }
+
+    #etoile_seven {
+        width: 25px;
+    }
+
+    #etoile_eight {
+        width: 25px;
+        top: 285%;
+    }
+}
+
 @media (max-width:840px) {
+    #etoile_eight {
+        z-index: 20;
+        left: 50%;
+        top: 280%;
+    }
+
     .aboutContainer {
         display: flex;
         flex-direction: column-reverse;
@@ -345,6 +504,16 @@ html {
 }
 
 @media (max-width:430px) {
+    #etoile_eight {
+        left: 55%;
+        top: 295%;
+    }
+
+    #img_feuille_three {
+        width: 130px;
+        right: 50%;
+    }
+
     .aboutContainer {
         width: 300px;
         height: 750px;
@@ -357,6 +526,31 @@ html {
 }
 
 /* section formations */
+
+#etoile_nine {
+    left: 90%;
+    top: 255%;
+}
+
+#etoile_ten {
+    left: 60%;
+    top: 325%;
+}
+
+#etoile_eleven {
+    left: 27%;
+    z-index: 20;
+    top: 350%;
+}
+
+
+
+#img_feuille_five {
+    left: 0;
+    top: 220%;
+    width: 400px;
+}
+
 #formation {
     display: flex;
     flex-direction: column;
@@ -366,7 +560,7 @@ html {
 
 #formationTitle {
     text-align: right;
-    margin-top: 250px;
+    margin-top: 150px;
     margin-right: 300px;
     width: 1800px;
 }
@@ -507,6 +701,11 @@ html {
 }
 
 @media (max-width:1240px) {
+    #etoile_ten {
+        left: 60%;
+        top: 335%;
+    }
+
     .sliderContainer {
         width: 1050px;
     }
@@ -522,6 +721,17 @@ html {
 }
 
 @media (max-width:1080px) {
+    #etoile_ten {
+        left: 60%;
+        top: 345%;
+    }
+
+    #img_feuille_five {
+        left: 0;
+        top: 225%;
+        width: 400px;
+    }
+
     .sliderContainer {
         width: 900px;
     }
@@ -564,6 +774,45 @@ html {
 }
 
 @media (max-width:840px) {
+    #etoile_eleven {
+        top: 450%;
+    }
+
+    #etoile_ten {
+        width: 25px;
+        top: 465%;
+    }
+}
+
+@media (max-width:800px) {
+    #etoile_nine {
+        width: 25px;
+    }
+
+    #etoile_ten {
+        width: 25px;
+        top: 435%;
+    }
+
+    #etoile_eleven {
+        width: 25px;
+        top: 650%;
+    }
+
+
+}
+
+
+@media (max-width:840px) {
+    #img_feuille_five {
+        top: 265%;
+        width: 350px;
+    }
+
+    #etoile_nine {
+        top: 295%;
+    }
+
     #formationTitle {
         margin-right: 150px;
     }
@@ -602,6 +851,11 @@ html {
 }
 
 @media (max-width:640px) {
+    #img_feuille_five {
+        top: 275%;
+        width: 250px;
+    }
+
     .sliderContainer {
         width: 500px;
     }
@@ -618,6 +872,11 @@ html {
 }
 
 @media (max-width:540px) {
+    #img_feuille_five {
+        top: 275%;
+        width: 250px;
+    }
+
     .sliderContainer {
         width: 400px;
     }
@@ -641,7 +900,60 @@ html {
 
 }
 
+@media (max-width:420px) {
+    #etoile_nine {
+        top: 310%;
+    }
+
+    #img_feuille_five {
+        top: 295%;
+        width: 225px;
+    }
+
+    .sliderContainer {
+        width: 350px;
+    }
+
+    .formationContainer {
+        width: 350px;
+        gap: 0
+    }
+
+    #formationTitle {
+        width: 400px;
+    }
+
+    #buttonRight {
+        width: 25px;
+        margin: 0
+    }
+
+    #buttonLeft {
+        width: 25px;
+        margin: 0
+    }
+
+}
+
 /* css projets */
+
+#img_feuille_seven {
+    left: 0;
+    top: 325%;
+    width: 500px;
+}
+
+#img_feuille_eight {
+    right: 15%;
+    top: 335%;
+    width: 150px;
+}
+
+#etoile_twelve {
+    right: 15%;
+    top: 390%;
+}
+
 #projects {
     display: flex;
     flex-direction: column;
@@ -837,6 +1149,26 @@ html {
 
 }
 
+@media (max-width:840px) {
+    #img_feuille_seven {
+        left: 0;
+        top: 425%;
+        width: 400px;
+    }
+
+    #img_feuille_eight {
+        right: 15%;
+        top: 445%;
+        width: 150px;
+    }
+}
+
+@media (max-width:800px) {
+    #etoile_twelve {
+        width: 25px;
+    }
+}
+
 @media (max-width : 600px) {
     #imgProjet {
         width: 156px;
@@ -858,6 +1190,16 @@ html {
 }
 
 @media (max-width : 500px) {
+    #img_feuille_seven {
+        width: 300px;
+        top: 445%;
+    }
+
+    #img_feuille_eight {
+        width: 100px;
+        top: 460%
+    }
+
     .projectContainer {
         gap: 25px;
     }
@@ -886,6 +1228,35 @@ html {
 }
 
 /* css form contact */
+#img_feuille_nine {
+    width: 350px;
+    right: 0;
+}
+
+#img_feuille_ten {
+    width: 200px;
+    left:10%;
+    top: 450%;
+}
+
+#etoile_thirteen {
+    top: 550%;
+    left: 10%;
+}
+#etoile_fourteen {
+    top: 465%;
+    right: 20%;
+}
+#etoile_fiveteen {
+    top: 555%;
+    right: 20%;
+}
+
+#etoile_sixteen {
+    top:565%;
+    right: 70%;
+}
+
 #contact {
     display: flex;
     flex-direction: column;
@@ -938,7 +1309,39 @@ html {
     padding: 3px
 }
 
+@media (max-width:840px) {
+    #img_feuille_ten {
+        top: 550%;
+    }
+}
+
+@media (max-width:800px) {
+    #etoile_thirteen {
+       width: 25px;
+    }
+    #etoile_fourteen {
+        width: 25px;
+    }
+    #etoile_fiveteen {
+        width: 25px;
+    }
+    
+    #etoile_sixteen {
+        width: 25px;
+    }
+}
+
+@media (max-width :580px) {
+    #img_feuille_ten {
+        width: 100px;
+    }
+    #img_feuille_nine {
+        width: 250px;
+        right: 0;
+    }
+}
 @media (max-width :540px) {
+   
     .formContainer {
         width: 300px;
         height: 400px;
@@ -958,6 +1361,13 @@ html {
     #message {
         width: 250px;
     }
+
+}
+@media (max-width :440px) {
+   
+#etoile_eleven{
+    top:680%
+}
 
 }
 

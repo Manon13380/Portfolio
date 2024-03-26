@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt')
 exports.getLogin = (req, res) => {
     try {
         req.session.destroy();
-        console.log(req.session);
         res.render("login/index.html.twig")
     } catch (error) {
         res.send(error)

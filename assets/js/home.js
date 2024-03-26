@@ -4,7 +4,10 @@ let textWrapper = document.querySelector(".textWrapper");
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 let textWrapperTwo = document.querySelector('.textWrapperTwo');
 textWrapperTwo.innerHTML = textWrapperTwo.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-let imageWrapper = document.querySelector('.reseau')
+let imageWrapper = document.querySelector('.reseau');
+
+
+
 
 
 let myTimeline = anime.timeline({ loop: false })
