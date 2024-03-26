@@ -23,4 +23,7 @@ app.listen(process.env.PORT, (err) => {
     else { console.log("connecté au serveur") }
 })
 
+app.get('*' ,(req,res)=>{
+    res.redirect('/')
+})
 mongoose.connect(process.env.URIDB)
